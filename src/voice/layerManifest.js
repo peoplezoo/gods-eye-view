@@ -326,8 +326,11 @@ const layers = [
         operator: ['t'],
         manufacturer: ['t'],
         cameraType: ['t'],
+        zone: ['t'],
+        ref: ['t'],
         directionDeg: ['n', 'deg'],
       },
+      viewportLoaded: true,
     },
   },
   {

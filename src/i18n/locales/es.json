@@ -2889,5 +2889,8 @@
   "USB work abandoned after a stalled transfer": "Trabajo USB cancelado tras una transferencia bloqueada",
   "SDR decoder did not start; receiver stopped": "El decodificador SDR no arrancó; receptor detenido",
   "SDR decoder stopped responding; receiver stopped": "El decodificador SDR dejó de responder; receptor detenido",
-  "SDR decoder fell behind; receiver stopped": "El decodificador SDR se quedó atrás; receptor detenido"
+  "SDR decoder fell behind; receiver stopped": "El decodificador SDR se quedó atrás; receptor detenido",
+  "FIX ON OSM": "CORREGIR EN OSM",
+  "Open this camera on OpenStreetMap to verify or correct it": "Abre esta cámara en OpenStreetMap para verificarla o corregirla",
+  "Select a camera, then open it on OpenStreetMap so corrections flow back to the shared map": "Selecciona una cámara y ábrela en OpenStreetMap para que las correcciones lleguen al mapa compartido"
 }

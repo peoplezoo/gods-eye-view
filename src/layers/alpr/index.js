@@ -370,6 +370,9 @@ export function createAlprCamerasLayer({ source, services } = {}) {
     },
     getRowControls() {
       const count = state.dataSource?.entities.values.length || 0;
+      const selected = state.selectedId
+        ? state.recordById.get(state.selectedId)
+        : null;
       return {
         chips: [
           {
@@ -383,6 +386,27 @@ export function createAlprCamerasLayer({ source, services } = {}) {
             disabled:
               !state.enabled || !count || Boolean(state.viewer?.trackedEntity),
             onClick: focusNearest,
+          },
+          {
+            id: 'edit-osm',
+            label: t('FIX ON OSM'),
+            title: Number.isSafeInteger(selected?.osmId)
+              ? t('Open this camera on OpenStreetMap to verify or correct it')
+              : t(
+                  'Select a camera, then open it on OpenStreetMap so corrections flow back to the shared map',
+                ),
+            disabled: !state.enabled || !Number.isSafeInteger(selected?.osmId),
+            onClick: () => {
+              const record = state.selectedId
+                ? state.recordById.get(state.selectedId)
+                : null;
+              if (!Number.isSafeInteger(record?.osmId)) return;
+              window.open(
+                `https://www.openstreetmap.org/node/${record.osmId}`,
+                '_blank',
+                'noopener,noreferrer',
+              );
+            },
           },
         ],
         legend: [
@@ -421,6 +445,8 @@ export function createAlprCamerasLayer({ source, services } = {}) {
           operator: record.operator ?? null,
           manufacturer: record.manufacturer ?? null,
           cameraType: record.cameraType ?? null,
+          zone: record.zone ?? null,
+          ref: record.ref ?? null,
           directionDeg: Number.isFinite(record.directionDeg)
             ? record.directionDeg
             : null,

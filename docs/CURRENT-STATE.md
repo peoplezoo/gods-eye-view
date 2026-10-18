@@ -726,6 +726,11 @@ adapter. Sources return normalized records, stale/coverage flags and their own
 attribution; rendering does not parse tile payloads. The standalone
 registration supplies selection, picking, terrain and
 render services. Selected cards and Data attribution identify OpenStreetMap.
+Selected cards show `ZONE`, `REF` and `VERIFIED` lines when OpenStreetMap supplies
+them. **FIX ON OSM** opens the selected camera's OpenStreetMap node in a new tab so
+a correction flows back to the shared map; it is enabled only for a camera that has
+an OpenStreetMap id. Analyst queries accept `zone` and `ref` text fields, and
+`alpr-cameras` counts cover the loaded city view, not the world.
 Layer state and the existing voice layer tools include `alpr-cameras`.
 The row count explicitly says **nearby**: loaded records can be outside the
 screen. Cyan camera badges use Manjunath's camera artwork; selection switches to a

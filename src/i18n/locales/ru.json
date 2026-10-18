@@ -2956,5 +2956,8 @@
   "USB work abandoned after a stalled transfer": "Работа с USB прервана: передача данных зависла",
   "SDR decoder did not start; receiver stopped": "Декодер SDR не запустился; приёмник остановлен",
   "SDR decoder stopped responding; receiver stopped": "Декодер SDR перестал отвечать; приёмник остановлен",
-  "SDR decoder fell behind; receiver stopped": "Декодер SDR не успевает; приёмник остановлен"
+  "SDR decoder fell behind; receiver stopped": "Декодер SDR не успевает; приёмник остановлен",
+  "FIX ON OSM": "ИСПРАВИТЬ В OSM",
+  "Open this camera on OpenStreetMap to verify or correct it": "Откройте эту камеру в OpenStreetMap, чтобы проверить или исправить её данные",
+  "Select a camera, then open it on OpenStreetMap so corrections flow back to the shared map": "Выберите камеру, затем откройте её в OpenStreetMap, чтобы исправления попали на общую карту"
 }

@@ -549,7 +549,7 @@ export const ACTION_DESCRIPTIONS = {
       properties: {
         layers: {
           description:
-            'Layers to query. fires → local-firms; ships → ais-live-vessels; buses/trains → transit; hurricanes → weather-cyclones; bases → military-installations; my receiver → local-adsb. Units differ per layer, so rank speed within one layer.',
+            'Layers to query. fires → local-firms; ships → ais-live-vessels; buses/trains → transit; hurricanes → weather-cyclones; bases → military-installations; my receiver → local-adsb; plate readers/ALPR/Flock cameras → alpr-cameras (viewport-loaded: counts cover the loaded city view, not the world). Units differ per layer, so rank speed within one layer.',
           $position: 2,
         },
         scope: {
@@ -575,7 +575,7 @@ export const ACTION_DESCRIPTIONS = {
           },
         },
         filters: {
-          description: `ANDed; values keep their type (numbers, true/false). Altitude is meters (40,000 ft = 12192). Time fields take ISO; ageHours = hours ago. Every layer has id, lat, lon. Fields — ${voiceQueryFieldHint()}.`,
+          description: `ANDed; values keep their type (numbers, true/false). Altitude is meters (40,000 ft = 12192). Time fields take ISO; ageHours = hours ago. Every layer has id, lat, lon. Fields — ${voiceQueryFieldHint()}. Flock cameras = manufacturer contains flock (alpr-cameras).`,
           $position: 1,
         },
         sortBy: {
